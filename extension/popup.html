@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local WhatsApp Sender</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>Local WhatsApp Sender</h1>
+    <p class="muted">Keep WhatsApp Web open and logged in.</p>
+
+    <section class="card">
+      <label>Excel file
+        <input id="file" type="file" accept=".xlsx,.xls,.csv">
+      </label>
+      <div id="fileInfo" class="muted">No file loaded.</div>
+      <div class="stats"><span id="validCount">Valid: 0</span><span id="invalidCount">Invalid: 0</span><span id="duplicateCount">Duplicates: 0</span></div>
+    </section>
+
+    <section class="card">
+      <label>Message
+        <div class="toolbar" aria-label="Message formatting">
+          <button type="button" class="format" data-prefix="*" data-suffix="*" title="Bold"><strong>B</strong></button>
+          <button type="button" class="format" data-prefix="_" data-suffix="_" title="Italic"><em>I</em></button>
+          <button type="button" class="format" data-prefix="~" data-suffix="~" title="Strikethrough"><s>S</s></button>
+          <button type="button" class="format" data-prefix="```" data-suffix="```" title="Monospace">Mono</button>
+          <button type="button" id="lineBreak" title="Insert line break">↵</button>
+        </div>
+        <textarea id="message" rows="5" placeholder="Type your message..."></textarea>
+      </label>
+      <label>Optional image
+        <input id="image" type="file" accept="image/*">
+        <span id="imageInfo" class="muted">No image selected. Text-only sending will be used.</span>
+      </label>
+      <label>Gap between messages (seconds)
+        <input id="delay" type="number" min="19" step="1" value="19">
+        <span class="field-note">Minimum 19 seconds enforced for safer use. Lower values are not allowed.</span>
+      </label>
+      <label class="check"><input id="testMode" type="checkbox"> Test mode: use manual numbers only</label>
+      <label id="testNumberRow">Manual test numbers (Excel not required in test mode)
+        <textarea id="testNumber" rows="3" placeholder="+923xxxxxxxxx, +923yyyyyyyyy&#10;You can also enter one number per line"></textarea>
+      </label>
+      <label>Opt-out numbers (one per line)
+        <textarea id="optouts" rows="3" placeholder="+923xxxxxxxxx"></textarea>
+      </label>
+    </section>
+
+    <section class="card consent">
+      <label class="check"><input id="consent" type="checkbox"> I understand WhatsApp Web automation can restrict this account, and I will use this tool responsibly.</label>
+    </section>
+
+    <section class="actions">
+      <button id="preview" class="secondary">Preview</button>
+      <button id="start" class="primary">Start</button>
+      <button id="pause" class="secondary">Pause</button>
+      <button id="resume" class="secondary">Resume</button>
+      <button id="stop" class="danger">Emergency stop</button>
+    </section>
+    <div id="notice" class="notice"></div>
+
+    <section class="card">
+      <h2>Campaign</h2>
+      <div id="campaignStatus" class="muted">No campaign.</div>
+      <div id="log" class="log"></div>
+    </section>
+
+    <section class="card">
+      <h2>Preview</h2>
+      <div class="table-wrap"><table><thead><tr><th>#</th><th>Number</th><th>Status</th></tr></thead><tbody id="previewBody"></tbody></table></div>
+    </section>
+  </main>
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

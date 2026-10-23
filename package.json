@@ -1,0 +1,16 @@
+{
+  "name": "auto-sender-whatsapp",
+  "version": "1.0.0",
+  "description": "WhatsApp contacts ko organize karne aur future mein automated messaging workflow ke liye project workspace.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

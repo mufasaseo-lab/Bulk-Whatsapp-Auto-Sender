@@ -1,0 +1,4 @@
+node_modules/
+*.log
+.env
+contacts_list.xlsx

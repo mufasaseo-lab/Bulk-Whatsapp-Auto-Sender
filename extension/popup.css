@@ -1,0 +1,31 @@
+:root { color-scheme: light; font-family: Segoe UI, Arial, sans-serif; }
+body { width: 410px; margin: 0; color: #17202a; background: #f4f7f8; }
+main { padding: 14px; }
+h1 { margin: 0 0 3px; font-size: 19px; }
+h2 { margin: 0 0 9px; font-size: 14px; }
+.muted { color: #65727d; font-size: 12px; }
+.card { margin-top: 11px; padding: 11px; border: 1px solid #dbe3e7; border-radius: 9px; background: #fff; }
+label { display: block; margin-bottom: 9px; font-size: 12px; font-weight: 600; }
+input[type=file], input[type=number], textarea { box-sizing: border-box; width: 100%; margin-top: 5px; padding: 8px; border: 1px solid #c7d0d5; border-radius: 6px; font: inherit; font-size: 12px; }
+textarea { resize: vertical; }
+.field-note { display: block; margin-top: 4px; color: #8a4b08; font-size: 11px; font-weight: 500; }
+.toolbar { display: flex; gap: 4px; margin-top: 5px; }
+.toolbar button { min-width: 29px; padding: 5px 7px; border: 1px solid #c7d0d5; background: #f4f7f8; color: #17202a; }
+.toolbar button:hover { background: #dce8ec; }
+.check { display: flex; gap: 7px; align-items: flex-start; font-weight: 500; }
+.check input { margin-top: 1px; }
+.consent { border-color: #e2b84d; background: #fffaf0; }
+.stats { display: flex; gap: 8px; flex-wrap: wrap; font-size: 11px; color: #50606b; }
+.actions { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 11px; }
+button { border: 0; border-radius: 6px; padding: 9px 6px; cursor: pointer; font-weight: 600; font-size: 11px; }
+button:disabled { cursor: not-allowed; opacity: .58; }
+.primary { background: #16805c; color: white; }
+.secondary { background: #dce8ec; color: #17202a; }
+.danger { background: #b42318; color: white; }
+.notice { min-height: 18px; margin-top: 7px; font-size: 12px; color: #a33b00; }
+.log { max-height: 120px; overflow: auto; font-size: 11px; line-height: 1.45; }
+.log div { border-bottom: 1px solid #edf0f1; padding: 3px 0; }
+.table-wrap { max-height: 145px; overflow: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 11px; }
+th, td { padding: 5px; border-bottom: 1px solid #edf0f1; text-align: left; }
+th { position: sticky; top: 0; background: #fff; }
