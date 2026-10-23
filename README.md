@@ -2,6 +2,12 @@
 
 WhatsApp contacts ko organize karne aur future mein automated messaging workflow ke liye project workspace.
 
+## GitHub repository
+
+Project repository: https://github.com/mufasaseo-lab/Bulk-Whatsapp-Auto-Sender
+
+Repository private hai. Personal contact workbook `contacts_list.xlsx` ko privacy ke liye GitHub par upload nahi kiya gaya.
+
 ## Current project status
 
 **MVP development started.** Local Chrome Extension ka first implementation `extension/` folder mein available hai. Yeh abhi development MVP hai; production reliability aur WhatsApp Web UI compatibility ki guarantee nahi hai.
